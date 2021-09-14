@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas - Aula 02(desafio)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="page__title">Conversor de moedas</h1>
+            <p class="page__subtitle">Converta dólar, euro e real, facilmente.
+            </p>
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+                class="page__logo" alt="Logo imersão dev">
+            <a href="https://alura.com.br/" target="_blank" class="page__link">
+                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" class="alura__logo">
+            </a>
+        </div>
+    </header>
+    <main>
+        <h2 id="seleciona__moedas">Selecione a moeda a ser convertida</h2>
+        <section class="options">
+            <label for="moeda1">De:</label>
+            <select id="moeda1" class="lista__moedas" placeholder="Selecione uma moeda para ser convertida" required>
+                <option value="" disabled selected>Selecione uma moeda</option>
+                <option value="real">Real</option>
+                <option value="dolar">Dólar</option>
+                <option value="euro">Euro</option>
+                <option value="libra">Libra esterlina</option>
+                <option value="peso">Peso Argentino</option>
+                <option value="bitcoin">Bitcoin</option>
+                <option value="ethereum">Ethereum</option>
+            </select>
+        </section>
+        <div class="inputValor">
+            <label for="valor">Insira o valor a ser convertido:</label>
+            <input type="number" id="valor" placeholder="Insira o valor aqui">
+        </div>
+        <h2 id="seleciona__moedas">Selecione a moeda para ser feita a conversão</h2>
+        <section class="options">
+            <label for="moeda2">Para:</label>
+            <select id="moeda2" class="lista__moedas" placeholder="Selecione uma moeda para ser convertida" required>
+                <option value="" disabled selected>Selecione uma moeda</option>
+                <option value="real">Real</option>
+                <option value="dolar">Dólar</option>
+                <option value="euro">Euro</option>
+                <option value="libra">Libra esterlina</option>
+                <option value="peso">Peso Argentino</option>
+                <option value="bitcoin">Bitcoin</option>
+                <option value="ethereum">Ethereum</option>
+            </select>
+        </section>
+        <div class="botao">
+            <button class="btn" onclick="converteMoedas()">Clique aqui para converter</button>
+        </div>
+        <div>
+            <p id="conversao"></p>
+        </div>
+    </main>
+    <footer class="rodape">Desenvolvido por Marcus Urani</footer>
+</body>
+
+<script src="index.js"></script>
+
+</html>

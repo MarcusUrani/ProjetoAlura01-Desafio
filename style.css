@@ -1,0 +1,128 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #40E0D0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page__title {
+  color: #191919;
+  margin: 0 0 5px;
+}
+
+.page__subtitle {
+  color: #191919;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.page__logo {
+  width: 200px;
+}
+
+.alura__logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#seleciona__moedas {
+  text-align: center;
+  font-size: 20px;
+  color: #191919;
+}
+
+.options {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.options label {
+  margin-right: 20px;
+}
+
+.options select {
+  padding: 2px;
+  background: transparent;
+  border: none;
+  border: 1.5px solid #191919;
+  background: #ffffff;
+}
+
+.options select:hover {
+  cursor: pointer;
+}
+
+.inputValor {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.inputValor label {
+  margin-right: 20px;
+}
+
+.inputValor input {
+  border: none;
+  background: transparent;
+  padding: 2px;
+  background-color: #fff;
+  border: 1.5px solid #191919;
+}
+
+::-webkit-input-placeholder {
+   color: #191919; 
+}
+
+#conversao {
+  text-align: center;
+  color: #191919;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.rodape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+  padding: 5px;
+  background-color: #008b8b;
+}
+
+.botao {
+  display:flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.botao .btn{
+  padding: 3px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  border-color: #191919;
+  border-style: solid;
+  background-color: #ffffff;
+  box-shadow: 3px 2px; 
+  font-weight: bold;
+}
+
+.botao .btn:hover {
+  border-color: #ffffff;
+  background-color: #191919;
+  color: #ffffff;
+  transition: .3s ease;
+  cursor: pointer;
+}
