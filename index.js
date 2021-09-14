@@ -9,9 +9,9 @@ function converteMoedas() {
         ethereum: 17537.90
     }
 
-    const moeda1 = document.getElementById("moeda1").value;
+    const moeda1 = document.querySelector("#moeda1").value;
 
-    const moeda2 = document.getElementById("moeda2").value;
+    const moeda2 = document.querySelector("#moeda2").value;
 
     const valor = document.querySelector("#valor").value;
 
@@ -19,5 +19,5 @@ function converteMoedas() {
 
     let valorCorrigido = valor2.toFixed(2);
 
-    document.getElementById("conversao").innerHTML = `O valor convertido é: ${valorCorrigido}`;
+    document.querySelector("#conversao").innerHTML = `O valor convertido é: ${valorCorrigido}`;
 }
