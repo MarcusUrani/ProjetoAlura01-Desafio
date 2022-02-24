@@ -32,41 +32,41 @@
             <label for="moeda1">De:</label>
             <select id="moeda1" class="lista__moedas" placeholder="Selecione uma moeda para ser convertida" required>
                 <option value="" disabled selected>Selecione uma moeda</option>
-                <option value="real">Real</option>
-                <option value="dolar">Dólar</option>
-                <option value="euro">Euro</option>
-                <option value="libra">Libra esterlina</option>
-                <option value="peso">Peso Argentino</option>
-                <option value="bitcoin">Bitcoin</option>
-                <option value="ethereum">Ethereum</option>
+                <option value="BRL">Real</option>
+                <option value="USD">Dólar</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">Libra esterlina</option>
+                <option value="RUB">Rublo Russo</option>
+                <option value="BTC">Bitcoin</option>
+                <option value="ETH">Ethereum</option>
             </select>
         </section>
         <div class="inputValor">
             <label for="valor">Insira o valor a ser convertido:</label>
-            <input type="number" id="valor" placeholder="Insira o valor aqui">
+            <input type="number" id="valor" required placeholder="Insira o valor aqui">
         </div>
         <h2 id="seleciona__moedas">Selecione a moeda para ser feita a conversão</h2>
         <section class="options">
             <label for="moeda2">Para:</label>
             <select id="moeda2" class="lista__moedas" placeholder="Selecione uma moeda para ser convertida" required>
                 <option value="" disabled selected>Selecione uma moeda</option>
-                <option value="real">Real</option>
-                <option value="dolar">Dólar</option>
-                <option value="euro">Euro</option>
-                <option value="libra">Libra esterlina</option>
-                <option value="peso">Peso Argentino</option>
-                <option value="bitcoin">Bitcoin</option>
-                <option value="ethereum">Ethereum</option>
+                <option value="BRL">Real</option>
+                <option value="USD">Dólar</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">Libra esterlina</option>
+                <option value="RUB">Rublo Russo</option>
+                <option value="BTC">Bitcoin</option>
+                <option value="ETH">Ethereum</option>
             </select>
         </section>
         <div class="botao">
-            <button class="btn" onclick="converteMoedas()">Clique aqui para converter</button>
+            <button class="btn" onclick="convertSelected()">Clique aqui para converter</button>
         </div>
         <div>
             <p id="conversao"></p>
         </div>
     </main>
-    <footer class="rodape">Desenvolvido por Marcus Urani</footer>
+    <footer class="rodape">Desenvolvido por <a class="rodape__link" target="_blank" rel="noreferrer" href="https://github.com/MarcusUrani">Marcus Urani</a></footer>
 </body>
 
 <script src="index.js"></script>

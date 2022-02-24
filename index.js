@@ -1,23 +1,34 @@
-function converteMoedas() {
-    const moeda = {
-        real: 1,
-        euro: 6.17,
-        dolar: 5.21,
-        libra: 7.24,
-        peso: 0.053,
-        bitcoin: 244216.93,
-        ethereum: 17537.90
-    }
+const BASE_URL = "https://economia.awesomeapi.com.br/last/";
 
-    const moeda1 = document.querySelector("#moeda1").value;
+const fetchData = async (firstOption, secondOption) => {
+  const requisition = await fetch(`${BASE_URL}${firstOption}-${secondOption}`);
+  const response = await requisition.json();
+  return response;
+};
 
-    const moeda2 = document.querySelector("#moeda2").value;
+const convertSelected = async () => {
+  const firstOption = document.querySelector("#moeda1").value;
+  const secondOption = document.querySelector("#moeda2").value;
+  const inputValue = document.querySelector("#valor").value;
+  const resultArea = document.querySelector("#conversao");
+  const optionsValue = firstOption + secondOption;
 
-    const valor = document.querySelector("#valor").value;
+  if (firstOption && inputValue && secondOption) {
+    const fetchApi = await fetchData(firstOption, secondOption);
 
-    let valor2 = valor * (moeda[moeda1] / moeda[moeda2]);
+    const data = fetchApi[optionsValue];
+    const values = data.high;
 
-    let valorCorrigido = valor2.toFixed(2);
+    const result = calculateResult(inputValue, values);
 
-    document.querySelector("#conversao").innerHTML = `O valor convertido é: ${valorCorrigido}`;
-}
+    resultArea.innerHTML = `O valor de ${inputValue} ${firstOption} em ${secondOption} é: ${result}`;
+  } else {
+    resultArea.innerHTML = "É Necessário o preenchimento de todos os campos.";
+    alert("Por favor, preencha todos os campos");
+  }
+};
+
+const calculateResult = (inputValue, value) => {
+  const result = inputValue * value;
+  return result.toFixed(2);
+};
