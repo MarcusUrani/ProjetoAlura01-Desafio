@@ -19,7 +19,7 @@ const convertSelected = async () => {
     const data = fetchApi[optionsValue];
     const values = data.high;
 
-    const result = calculateResult(inputValue, values);
+    const result = calculateResult(inputValue, values, secondOption);
 
     resultArea.innerHTML = `O valor de ${inputValue} ${firstOption} em ${secondOption} é: ${result}`;
   } else {
@@ -28,7 +28,10 @@ const convertSelected = async () => {
   }
 };
 
-const calculateResult = (inputValue, value) => {
+const calculateResult = (inputValue, value, currency) => {
   const result = inputValue * value;
-  return result.toFixed(2);
+  return result.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: currency,
+  });
 };
